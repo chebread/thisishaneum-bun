@@ -18,29 +18,31 @@ const DonationButton = () => {
       <Wrapper>
         <ButtonWrapper>
           <Button
-            // onMouseEnter={onMouseEnterButton}
-            // onMouseLeave={onMouseLeaveButton}
+            onMouseEnter={onMouseEnterButton}
+            onMouseLeave={onMouseLeaveButton}
             rel="noopener noreferrer"
             href="https://toss.me/chahaneum"
             target="_blank"
           >
-            {isShow ? (
+            {/* {isShow ? (
               <Notify>
-                Go to <GradationText>toss.im/chahaneum</GradationText>
+                Go to <GradationText>toss.me/chahaneum</GradationText>
               </Notify>
             ) : (
               <SvgCoin />
-            )}
+            )} */}
+            <SvgCoin />
           </Button>
         </ButtonWrapper>
       </Wrapper>
+      {/* {isShow ? <LinkMoveNotify>toss.im/chahaneum</LinkMoveNotify> : ''} */}
     </>
   );
 };
 
 const Notify = styled.span`
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
 `;
 const Wrapper = styled.div`
   position: absolute;

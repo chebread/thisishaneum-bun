@@ -1,6 +1,5 @@
 import DonationButton from 'components/Sponsors/DonationButton';
 import styled from 'styled-components';
-import { useEffect } from 'react';
 
 const Sponsors = () => {
   return (
