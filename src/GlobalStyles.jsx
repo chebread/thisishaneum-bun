@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -10,12 +10,16 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html, body, #root {
+    position: relative;
     height: 100%;
     background-color: rgb(10, 10, 10);
     color: #fff;
+    cursor: text;
   }
   ::selection {
-    background-color: rgb(0, 119, 238);
+    background-color: rgb(255, 136,15);
+    /* background-color: rgb(0, 119, 238); */
+    /* color: rgb(255, 136,15); */
   }
 `;
 

@@ -1,5 +1,5 @@
 const ServiceUnavailable = () => {
-  return 503;
+  return <div>503</div>;
 };
 
 export default ServiceUnavailable;
