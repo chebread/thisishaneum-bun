@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  // #0077ee #ff880f #07ee00
   body {
     margin: 0;
     padding: 0;
@@ -17,9 +18,8 @@ const GlobalStyles = createGlobalStyle`
     cursor: text;
   }
   ::selection {
-    /* background-color: rgb(255, 136,15); */
-    /* background-color: rgb(0, 119, 238); */
-    /* color: rgb(255, 136,15); */
+    background-color: #00ee00;
+    color: #000;
   }
 `;
 

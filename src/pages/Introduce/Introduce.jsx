@@ -1,7 +1,7 @@
 import FullScreen from 'layouts/FullScreen';
 import styled from 'styled-components';
 
-const Home = () => {
+const Introduce = () => {
   return 'home';
 };
-export default Home;
+export default Introduce;
