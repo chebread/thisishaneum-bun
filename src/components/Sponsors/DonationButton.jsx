@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import SvgCoin from 'icons/SvgCoin';
 import { useState } from 'react';
 import FooterScreen from 'components/FooterScreen';
-// import LinkMoveNotify from 'components/LinkMoveNotify/LinkMoveNotify';
-// import GradationText from 'components/GradationText.jsx/GradationText';
 
 const DonationButton = () => {
   const [isShow, setIsShow] = useState(false);
@@ -34,12 +32,12 @@ const DonationButton = () => {
 const Button = styled.a`
   all: unset;
   backdrop-filter: blur(15px); // 18.75px // safari는 왜 달라질까? // invert(1)
-  background-color: rgba(20, 17, 12, 25%); // rgba(20, 17, 12, 50%); // 15%
+  background-color: rgba(20, 17, 12, 20%); // rgba(20, 17, 12, 50%); // 15%
   &:hover {
-    background-color: rgba(45, 41, 37, 25%); // + 10
+    background-color: rgba(45, 41, 37, 20%); // + 10
   }
   &:active {
-    background-color: rgba(69, 63, 57, 25%); // + 20
+    background-color: rgba(69, 63, 57, 20%); // + 20
   }
   // else
   position: fixed;
@@ -59,17 +57,3 @@ const Button = styled.a`
   margin: 30px;
 `;
 export default DonationButton;
-
-{
-  /* {isShow ? (
-    <Notify>
-      Go to <GradationText>toss.me/chahaneum</GradationText>
-    </Notify>
-  ) : (
-    <SvgCoin />
-  )} */
-}
-// const Notify = styled.span`
-//   font-size: 25px;
-//   font-weight: 600;
-// `;
