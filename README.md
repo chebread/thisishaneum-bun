@@ -5,4 +5,4 @@
 [thisishaneum.com](https://thisishaneum.com)
 
 ## License
-MIT Licesen &copy; 2022 Cha Haneum
+[MIT Licesen &copy; 2022 Cha Haneum](.github/LICENSE)
