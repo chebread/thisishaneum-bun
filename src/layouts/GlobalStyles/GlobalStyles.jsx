@@ -16,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
     background-color: #0a0a0a;
     color: #fff;
     cursor: text;
+    font-weight: 600;
+    box-sizing: border-box;
   }
   ::selection {
     background-color: #07ee00;

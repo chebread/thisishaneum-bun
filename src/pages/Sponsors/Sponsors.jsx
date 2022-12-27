@@ -13,7 +13,7 @@ const Sponsors = () => {
         description="If you want to sponsor for Cha Haneum, click this link to sponsor"
       />
       <Background />
-      <DonationButton />
+      {/* <DonationButton /> */}
     </Screen>
   );
 };
