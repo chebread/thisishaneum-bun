@@ -1,30 +1,31 @@
+import Introduce from 'components/Contact/Introduce';
+import EnterName from 'components/Contact/EnterName';
+import { useRecoilValue } from 'recoil';
+import pageCountState from 'states/Contact/pageCountState';
+import EnterEmail from 'components/Contact/EnterEmail';
+import EnterMessage from 'components/Contact/EnterMessage';
 import FullScreen from 'layouts/FullScreen';
-import styled from 'styled-components';
-import { sendForm } from '@emailjs/browser';
+import SEO from 'components/SEO';
 
 const Contact = () => {
+  const count = useRecoilValue(pageCountState);
+
   return (
     <FullScreen>
-      <div>hello</div>
+      <SEO title="Contact" description="This is Cha Han-eum's resume" />
+      {count === 0 ? (
+        <Introduce />
+      ) : count === 1 ? (
+        <EnterName />
+      ) : count === 2 ? (
+        <EnterEmail />
+      ) : count === 3 ? (
+        <EnterMessage />
+      ) : (
+        'else! yet!' // error page / success page
+      )}
     </FullScreen>
   );
 };
-const Input = styled.input``;
-export default Contact;
 
-// const onSubmit = e => {
-//   e.preventDefault();
-//   sendForm(
-//     'service_h2nw1tb',
-//     'template_d3cf1o3',
-//     form.current,
-//     'xt2HABdpVLNHYTSZK'
-//   ).then(
-//     result => {
-//       console.log(result.text);
-//     },
-//     error => {
-//       console.log(error.text);
-//     }
-//   );
-// };
+export default Contact;

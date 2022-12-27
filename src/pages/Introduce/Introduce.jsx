@@ -1,7 +1,14 @@
-import FullScreen from 'layouts/FullScreen';
-import styled from 'styled-components';
+import SEO from 'components/SEO';
 
 const Introduce = () => {
-  return 'home';
+  return (
+    <>
+      <SEO
+        title="Introduce"
+        description="This is a unique page to introduce myself"
+      />
+    </>
+  );
 };
+
 export default Introduce;

@@ -3,7 +3,7 @@ import SvgHome from 'icons/SvgHome';
 import SvgContact from 'icons/SvgContact';
 import SvgProfile from 'icons/SvgProfile';
 import styled from 'styled-components';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import SvgMenu from 'icons/SvgMenu';
 import SvgXMark from 'icons/SvgXMark';
@@ -54,7 +54,6 @@ const Navigator = () => {
           </ShowButtonWrapper>
         </Wrapper>
       )}
-      <Outlet />
     </>
   );
 };
@@ -76,14 +75,16 @@ const ShowButton = styled.button`
   z-index: 3;
   min-height: 75px;
   min-width: 75px;
-  background-color: rgba(25, 22, 17, 65%);
+
+  border-radius: 50%; // 30px
+  backdrop-filter: blur(15px);
+  background-color: rgba(30, 27, 22, 75%); // rgba(20, 17, 12, 50%);
   &:hover {
-    background-color: rgba(33, 29, 25, 65%);
+    background-color: rgba(35, 31, 27, 75%); // + 10
   }
   &:active {
-    background-color: rgba(49, 43, 37, 65%);
+    background-color: rgba(49, 43, 37, 75%); // + 20
   }
-  backdrop-filter: blur(18.75px);
   svg {
     height: 30px;
     width: 30px;
@@ -99,9 +100,9 @@ const Wrapper = styled.div`
   ${({ show }) =>
     show
       ? `
-    z-index: 10000;
-    backdrop-filter: blur(18.75px);
-   `
+          z-index: 10000;
+          backdrop-filter: blur(20px);
+        `
       : ''}
 `;
 const FooterWrapper = styled.div`
@@ -114,15 +115,12 @@ const FooterWrapper = styled.div`
 `;
 const ButtonWrapper = styled.div`
   position: fixed;
-  /* @media (max-width: 800px) {
-    min-width: 100%;
-  } */
-  min-width: 50%; // 50%
+  min-width: 50%;
   height: auto;
   display: flex;
   flex-direction: row;
-  margin: 0px 0px 30px 0px;
   justify-content: center;
+  margin: 0px 0px 30px 0px;
   z-index: 3;
 `;
 const Button = styled(NavLink)`
@@ -133,13 +131,14 @@ const Button = styled(NavLink)`
   align-items: center;
   min-height: 75px;
   flex: 1; // min-width시 꽉차게 된다!
-  border-radius: 30px;
-  background-color: rgba(25, 22, 17, 65%);
+  border-radius: 500px; // 30px
+  backdrop-filter: blur(15px);
+  background-color: rgba(30, 27, 22, 75%); // rgba(20, 17, 12, 50%);
   &:hover {
-    background-color: rgba(33, 29, 25, 65%);
+    background-color: rgba(35, 31, 27, 75%); // + 10
   }
   &:active {
-    background-color: rgba(49, 43, 37, 65%);
+    background-color: rgba(49, 43, 37, 75%); // + 20
   }
   svg {
     height: 40px;
@@ -147,12 +146,6 @@ const Button = styled(NavLink)`
     fill: #fff;
   }
   margin: 0 30px 0 0;
-  /* &:first-child {
-    margin: 0 30px 0 30px;
-  }
-  &:last-child {
-    margin: 0 30px 0 0;
-  } */
   &:last-child {
     margin: 0;
   }

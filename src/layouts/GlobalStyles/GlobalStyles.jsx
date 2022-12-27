@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
   html, body, #root {
     position: relative;
     height: 100%;
-    background-color: rgb(10, 10, 10);
+    background-color: #0a0a0a;
     color: #fff;
     cursor: text;
   }

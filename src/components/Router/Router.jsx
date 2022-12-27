@@ -3,6 +3,7 @@ import {
   RouterProvider,
   createRoutesFromElements,
   Route,
+  Outlet,
 } from 'react-router-dom';
 import Introduce from 'pages/Introduce';
 import NotFoundPage from 'pages/ErrorPages/NotFoundPage';
@@ -14,7 +15,14 @@ import Contact from 'pages/Contact';
 const Router = ({ children }) => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={children}>
+      <Route
+        element={
+          <>
+            {children}
+            <Outlet />
+          </>
+        }
+      >
         <Route path="/" element={<Introduce />} />
         <Route path="a" element={<About />}></Route>
         <Route path="c" element={<Contact />} />

@@ -23,7 +23,7 @@ const CenterScreen = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: calc(100% - 30px);
   width: 100%;
   z-index: 1;
 `;

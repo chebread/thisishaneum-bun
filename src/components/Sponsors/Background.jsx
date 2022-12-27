@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const PhrasesBackground = () => {
+const Background = () => {
   return (
     <PhrasesWrapper>
       <Phrases>
@@ -66,12 +66,15 @@ const White = styled.span`
 const PhrasesWrapper = styled.div`
   position: absolute;
   z-index: 1;
-  height: calc(100% - 15px);
+  height: 100%;
+  width: 100%;
+  margin: 0px 10px 0 10px;
+  /* height: calc(100% - 15px);
   width: calc(100% - 20px);
-  margin: 5px 10px 10px 10px;
+  margin: 5px 10px 10px 10px; */
 `;
 const Phrases = styled.div`
   font-size: 50px;
   font-weight: 600;
 `;
-export default PhrasesBackground;
+export default Background;
