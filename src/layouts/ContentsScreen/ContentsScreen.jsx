@@ -2,8 +2,8 @@ const { default: styled } = require('styled-components');
 
 const ContentsScreen = styled.div`
   position: relative;
-  padding-top: 50px;
-  height: calc(100% - 50px);
+  padding-top: ${({ height }) => (height ? height : '50px')};
+  height: calc(100% - ${({ height }) => (height ? height : '50px')});
   width: 100%;
 `;
 

@@ -5,10 +5,23 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <HeaderScreen>
-      <HeaderWrapper to="/">thisishaneum</HeaderWrapper>
+      <Wrapper>
+        <HeaderWrapper to="/">thisishaneum</HeaderWrapper>
+      </Wrapper>
     </HeaderScreen>
   );
 };
+const Wrapper = styled.div`
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 15%); // 12.5
+  backdrop-filter: blur(5px);
+  z-index: 2;
+`;
 const HeaderWrapper = styled(Link)`
   all: unset;
   -webkit-touch-callout: none;
