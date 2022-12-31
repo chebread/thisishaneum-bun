@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Background from 'components/Sponsors/Background';
 import SEO from 'components/SEO';
 import ContentsScreen from 'layouts/ContentsScreen';
-import FullScreen from 'layouts/FullScreen';
 
 const Sponsors = () => {
   return (
@@ -12,6 +11,7 @@ const Sponsors = () => {
         title="Sponsors"
         description="If you want to sponsor for Cha Haneum, click this link to sponsor"
       />
+      {/* background에서 글자들의 p hover시 이동하는 것 만들기 */}
       <Background />
       {/* <DonationButton /> */}
     </Screen>

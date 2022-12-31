@@ -2,6 +2,8 @@ import HeaderScreen from 'layouts/HeaderScreen';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+// 주소 바뀌면 path 바꿔야 함
+// 503, 404는 홈으로 가야함
 const Header = () => {
   return (
     <HeaderScreen>
@@ -11,6 +13,7 @@ const Header = () => {
     </HeaderScreen>
   );
 };
+
 const Wrapper = styled.div`
   position: fixed;
   height: 50px;

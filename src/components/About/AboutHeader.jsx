@@ -7,7 +7,7 @@ const AboutHeader = () => {
     <HeaderScreen>
       <HeaderWrapper>
         <Wrapper>
-          <Header to="/a">thisishaneum</Header>
+          <Header to="a">thisishaneum</Header>
         </Wrapper>
         <Wrapper>
           <SausageHeader>
@@ -85,6 +85,10 @@ const ItemsWrapper = styled.div`
   .active {
     background-color: rgba(255, 255, 255, 100%);
     color: #000;
+    &:active {
+      // active 상태에서 클릭시
+      background-color: rgba(225, 225, 225, 100%);
+    }
   }
 `;
 const Items = styled(NavLink)`
@@ -101,11 +105,14 @@ const Items = styled(NavLink)`
   &:not(.active) {
     &:hover {
       background-color: rgba(50, 47, 42, 80%); // rgba(55, 52, 47, 75%);
-      color: #fff;
     }
+    /* &:active {
+      // 누르면 색상나오는 것: 수정 할 꺼면 해야 함
+      background-color: rgba(70, 67, 62, 80%); // (0): edit 필요
+    } */
   }
-
   /* &:active {
+    // (0): 작아지는 것 나중에 구현
     height: 47.5px;
     font-size: 18px;
     svg {

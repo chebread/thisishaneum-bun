@@ -1,6 +1,6 @@
 import AboutScreen from 'components/About/AboutScreen';
 import SEO from 'components/SEO';
-import Background from 'components/Sponsors/Background';
+import AboutIntroduce from './AboutIntroduce';
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
         title="About"
         description="If you want to know about Cha Haneum, click this link to check it out in detail"
       />
-      <Background />
+      <AboutIntroduce />
     </AboutScreen>
   );
 };

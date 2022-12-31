@@ -19,14 +19,13 @@ const DonationButton = () => {
 };
 
 const Button = styled(FooterButton)`
-  backdrop-filter: blur(10px);
-  // (0) 색상 다시
-  background-color: rgba(20, 17, 12, 0%);
+  backdrop-filter: blur(15px);
+  background-color: rgba(30, 27, 22, 100%); // rgba(20, 17, 12, 50%);
   &:hover {
-    background-color: rgba(45, 41, 37, 15%); // 10% // 45, 41, 37
+    background-color: rgba(40, 36, 32, 100%); // + 10 // 35, 31, 27
   }
   &:active {
-    background-color: rgba(69, 63, 57, 40%); // 30%
+    background-color: rgba(49, 43, 37, 100%); // + 20
   }
 `;
 export default DonationButton;

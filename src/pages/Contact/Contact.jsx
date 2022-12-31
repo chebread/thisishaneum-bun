@@ -1,4 +1,4 @@
-import Introduce from 'components/Contact/Introduce';
+import ContactIntroduce from 'components/Contact/ContactIntroduce';
 import EnterName from 'components/Contact/EnterName';
 import { useRecoilValue } from 'recoil';
 import pageCountState from 'states/Contact/pageCountState';
@@ -14,7 +14,7 @@ const Contact = () => {
     <FullScreen>
       <SEO title="Contact" description="This is Cha Han-eum's resume" />
       {count === 0 ? (
-        <Introduce />
+        <ContactIntroduce />
       ) : count === 1 ? (
         <EnterName />
       ) : count === 2 ? (

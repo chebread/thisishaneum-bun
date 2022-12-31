@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
 import pageCountState from 'states/Contact/pageCountState';
 
-const Introduce = () => {
+const ContactIntroduce = () => {
   const [count, setCount] = useRecoilState(pageCountState);
 
   const onClickStart = () => {
@@ -49,4 +49,4 @@ const Phrases = styled.div`
   padding: 27.5px;
   border-radius: 40px;
 `;
-export default Introduce;
+export default ContactIntroduce;
