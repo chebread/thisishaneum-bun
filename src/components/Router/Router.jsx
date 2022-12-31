@@ -11,8 +11,14 @@ import ServiceUnavailable from 'pages/ErrorPages/ServiceUnavailable';
 import About from 'pages/About';
 import Sponsors from 'pages/Sponsors';
 import Contact from 'pages/Contact';
-import AboutHeader from 'components/AboutHeader';
+import AboutHeader from 'components/About/AboutHeader';
 import Header from 'components/Header';
+import Tech from 'pages/About/Tech';
+import Info from 'pages/About/Info';
+import Contacts from 'pages/About/Contacts';
+import Careers from 'pages/About/Careers';
+import Projects from 'pages/About/Projects';
+import Navigator from 'components/Navigator';
 
 const Router = () => {
   const router = createBrowserRouter(
@@ -21,7 +27,7 @@ const Router = () => {
         <Route
           element={
             <>
-              {/* Nav */}
+              <Navigator />
               <Header />
               <Outlet />
             </>
@@ -36,13 +42,22 @@ const Router = () => {
         <Route
           element={
             <>
-              {/* Nav */}
+              <Navigator />
               <AboutHeader />
               <Outlet />
             </>
           }
         >
-          <Route path="a" element={<About />}></Route>
+          <Route path="a">
+            <Route index={true} element={<About />}>
+              {/* path a 에 element로 위치하면 이상함 */}
+            </Route>
+            <Route path="t" element={<Tech />} />
+            <Route path="i" element={<Info />} />
+            <Route path="c" element={<Contacts />} />
+            <Route path="j" element={<Careers />} />
+            <Route path="p" element={<Projects />} />
+          </Route>
         </Route>
       </>
     )

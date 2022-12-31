@@ -2,7 +2,7 @@ import SvgCoin from 'icons/SvgCoin';
 import SvgHome from 'icons/SvgHome';
 import SvgContact from 'icons/SvgContact';
 import SvgProfile from 'icons/SvgProfile';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import SvgMenu from 'icons/SvgMenu';
@@ -75,7 +75,6 @@ const ShowButton = styled.button`
   z-index: 3;
   min-height: 75px;
   min-width: 75px;
-
   border-radius: 50%; // 30px
   backdrop-filter: blur(15px);
   background-color: rgba(30, 27, 22, 75%); // rgba(20, 17, 12, 50%);
@@ -99,7 +98,8 @@ const Wrapper = styled.div`
   width: 100%;
   ${({ show }) =>
     show
-      ? `
+      ? css`
+          position: fixed;
           z-index: 10000;
           backdrop-filter: blur(20px);
         `
