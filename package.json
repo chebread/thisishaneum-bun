@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "bun dev --hot --port=8080"
+    "start": "bun dev --hot --port=8080",
+    "build": "react-scripts build"
   },
   "name": "thisishaneum",
   "version": "0.1.61",
