@@ -61,13 +61,11 @@ const NavButtonWrapper = styled.div`
   justify-content: center;
   margin: 0px 0px 30px 0px;
   z-index: 3;
-  // (0): 현 위치시 배경 나중에 구현
-  /* .active {
-    background-color: rgba(56, 48, 42, 75%);
-    &:active {
-      background-color: rgba(59, 53, 47, 75%);
+  .active {
+    svg {
+      fill: #9b9b9b;
     }
-  } */
+  }
 `;
 const Nav = styled.div`
   min-height: 75px;
@@ -84,7 +82,6 @@ const NavButton = styled(NavLink)`
   flex: 1; // min-width시 꽉차게 된다!
   border-radius: 500px; // 30px
   backdrop-filter: blur(15px);
-  /* &:not(.active) { */
   background-color: rgba(30, 27, 22, 75%);
   &:hover {
     background-color: rgba(35, 31, 27, 75%);
@@ -93,7 +90,6 @@ const NavButton = styled(NavLink)`
     background-color: rgba(49, 43, 37, 75%);
     // (0): 작아지는 것 나중에 구현
   }
-  /* } */
   svg {
     height: 40px;
     width: 40px;

@@ -3,78 +3,86 @@ import styled from 'styled-components';
 const Background = () => {
   return (
     <PhrasesWrapper>
-      <Phrases>
+      <Phrases
+        rel="noopener noreferrer"
+        href="https://toss.me/chahaneum"
+        target="_blank"
+      >
         {/* 이것의 길이를 유동화 해야함 */}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>{' '}
+        </Blue>
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>{' '}
+        </White>
       </Phrases>
     </PhrasesWrapper>
   );
 };
-const Blue = styled.span`
-  color: rgb(0, 119, 238);
-`;
-const White = styled.span`
-  color: #fff;
-`;
+
 const PhrasesWrapper = styled.div`
   position: absolute;
   z-index: 1;
   height: 100%;
   width: 100%;
-  margin: 0px 10px 0 10px;
-  /* height: calc(100% - 15px);
   width: calc(100% - 20px);
-  margin: 5px 10px 10px 10px; */
+  padding: 0px 10px 0 10px; // 이것을 그냥 한 글자당 paddding을 주어 하자!
 `;
 const Phrases = styled.div`
+  all: unset;
+  display: inline-block;
   font-size: 50px;
   font-weight: 600;
+`;
+const Blue = styled.span`
+  color: #0077ee;
+  border-radius: 25px;
+  /* padding: 0 10px 0 10px; */
+`;
+const White = styled.span`
+  color: #fff;
+  border-radius: 25px;
 `;
 export default Background;

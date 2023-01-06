@@ -20,12 +20,12 @@ const DonationButton = () => {
 
 const Button = styled(FooterButton)`
   backdrop-filter: blur(15px);
-  background-color: rgba(30, 27, 22, 100%); // rgba(20, 17, 12, 50%);
+  background-color: rgba(30, 27, 22, 75%); // rgba(20, 17, 12, 50%);
   &:hover {
-    background-color: rgba(40, 36, 32, 100%); // + 10 // 35, 31, 27
+    background-color: rgba(40, 36, 32, 75%); // + 10 // 35, 31, 27
   }
   &:active {
-    background-color: rgba(49, 43, 37, 100%); // + 20
+    background-color: rgba(49, 43, 37, 75%); // + 20
   }
 `;
 export default DonationButton;

@@ -13,7 +13,7 @@ const Sponsors = () => {
       />
       {/* background에서 글자들의 p hover시 이동하는 것 만들기 */}
       <Background />
-      {/* <DonationButton /> */}
+      <DonationButton />
     </Screen>
   );
 };

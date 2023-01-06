@@ -48,7 +48,7 @@ const ButtonFrame = styled.div`
   align-items: center;
   margin: 0 30px 0 0;
 `;
-const Button = styled.div`
+const Button = styled.button`
   all: unset;
   backdrop-filter: blur(15px);
   background-color: rgba(30, 27, 22, 75%);
