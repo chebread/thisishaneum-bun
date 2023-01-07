@@ -13,6 +13,16 @@ const App = () => {
       >
         <link rel="shortcut icon" type="image/x-icon" href={IcoFavicon} />
         <link rel="icon" type="image/svg+xml" href={SvgFavicon} />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: ligth)"
+          content="#ffffff"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#000000"
+        />
       </SEO>
       <Router />
     </FullScreen>
