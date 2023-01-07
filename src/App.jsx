@@ -3,6 +3,7 @@ import SEO from 'components/SEO';
 import FullScreen from 'layouts/FullScreen';
 import IcoFavicon from 'assets/favicon.ico';
 import SvgFavicon from 'assets/favicon.svg';
+import SafariFavicon from 'assets/apple-touch-icon.png';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       >
         <link rel="shortcut icon" type="image/x-icon" href={IcoFavicon} />
         <link rel="icon" type="image/svg+xml" href={SvgFavicon} />
+        <link rel="apple-touch-icon" href={SafariFavicon} />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: ligth)"
