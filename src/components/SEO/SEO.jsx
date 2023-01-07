@@ -1,13 +1,12 @@
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, children }) => {
+const SEO = ({ title, description }) => {
   const url = useRef(window.location.href);
   const serviceName = useRef('thisishaneum®');
 
   return (
     <Helmet>
-      {children}
       {/* Standard metadata tags */}
       <title>
         {title} - {serviceName.current}
