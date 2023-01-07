@@ -5,7 +5,7 @@ const ServiceUnavailable = () => {
   return (
     <>
       <SEO
-        title="The server could not process the request"
+        title="503"
         description="An error occurred while the server was processing the request."
       />
       <ErrorPage errorCode={503} />

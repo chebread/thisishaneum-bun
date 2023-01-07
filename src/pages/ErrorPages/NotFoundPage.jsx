@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <>
       <SEO
-        title="This page cannot be found"
+        title="404"
         description="this page is not provided by thisishaneum"
       />
       <ErrorPage errorCode={404} />
