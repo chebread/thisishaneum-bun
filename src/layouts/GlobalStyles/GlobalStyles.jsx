@@ -23,6 +23,15 @@ const GlobalStyles = createGlobalStyle`
     background-color: #07ee00;
     color: #000;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 1080px) {
+    body {
+      display: none;
+    }
+  }
 `;
 
 export default GlobalStyles;

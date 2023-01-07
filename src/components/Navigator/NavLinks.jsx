@@ -42,6 +42,7 @@ const NavScreen = styled.div`
   height: 100%;
   width: 100%;
   backdrop-filter: blur(20px); // 15px
+  background-color: rgba(10, 10, 10, 50%);
   z-index: 1000;
 `;
 const NavWrapper = styled.div`
@@ -59,18 +60,25 @@ const NavButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 15px; // 아이템들을 30px만큼 gap을 준다
   margin: 0px 0px 30px 0px;
   z-index: 3;
   .active {
     svg {
       fill: #9b9b9b;
     }
+    background-color: rgb(20, 17, 12);
+    &:hover {
+      background-color: rgb(25, 21, 17);
+    }
+    &:active {
+      background-color: rgb(39, 33, 27);
+    }
   }
 `;
 const Nav = styled.div`
   min-height: 75px;
-  flex: 1; // min-width시 꽉차게 된다!
-  margin: 0 30px 0 0;
+  flex: 1;
 `;
 const NavButton = styled(NavLink)`
   all: unset;
@@ -79,25 +87,22 @@ const NavButton = styled(NavLink)`
   justify-content: center;
   align-items: center;
   min-height: 75px;
-  flex: 1; // min-width시 꽉차게 된다!
+  flex: 1;
   border-radius: 500px; // 30px
   backdrop-filter: blur(15px);
-  background-color: rgba(30, 27, 22, 75%);
-  &:hover {
-    background-color: rgba(35, 31, 27, 75%);
-  }
-  &:active {
-    background-color: rgba(49, 43, 37, 75%);
-    // (0): 작아지는 것 나중에 구현
+  &:not(.active) {
+    background-color: rgb(30, 27, 22);
+    &:hover {
+      background-color: rgb(35, 31, 27);
+    }
+    &:active {
+      background-color: rgb(49, 43, 37);
+    }
   }
   svg {
     height: 40px;
     width: 40px;
     fill: #fff;
-  }
-  margin: 0 30px 0 0;
-  &:last-child {
-    margin: 0;
   }
 `;
 

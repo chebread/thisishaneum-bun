@@ -1,5 +1,6 @@
 import AboutScreen from 'components/About/AboutScreen';
 import SEO from 'components/SEO';
+import Background from 'components/Sponsors/Background';
 
 const About = () => {
   return (

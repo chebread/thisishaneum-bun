@@ -75,10 +75,10 @@ const SausageHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 `;
 const ItemsWrapper = styled.div`
   height: 50px;
-  // (0) width도 변하기 전에를 알면 고정하여 자연스레 축소됬다가 제자리로 넓이가 돌아 올 수도 있음 => js로 onhover시의 width 값을 저장하고 css var로 저장해서 사용하기
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +86,6 @@ const ItemsWrapper = styled.div`
     background-color: rgba(255, 255, 255, 100%);
     color: #000;
     &:active {
-      // active 상태에서 클릭시
       background-color: rgba(225, 225, 225, 100%);
     }
   }
@@ -98,7 +97,6 @@ const Items = styled(NavLink)`
   user-select: none;
   height: 50px;
   padding: 0 15px 0 15px;
-  margin: 5px;
   border-radius: 500px;
   backdrop-filter: blur(15px);
   background-color: rgba(30, 27, 22, 80%);
@@ -106,20 +104,7 @@ const Items = styled(NavLink)`
     &:hover {
       background-color: rgba(50, 47, 42, 80%); // rgba(55, 52, 47, 75%);
     }
-    /* &:active {
-      // 누르면 색상나오는 것: 수정 할 꺼면 해야 함
-      background-color: rgba(70, 67, 62, 80%); // (0): edit 필요
-    } */
   }
-  /* &:active {
-    // (0): 작아지는 것 나중에 구현
-    height: 47.5px;
-    font-size: 18px;
-    svg {
-      height: 37.5px;
-      width: 37.5px;
-    }
-  } */
   display: flex;
   justify-content: center;
   align-items: center;
