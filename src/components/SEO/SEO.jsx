@@ -7,7 +7,6 @@ const SEO = ({ title, description, children }) => {
 
   return (
     <Helmet>
-      {children}
       {/* Standard metadata tags */}
       <title>
         {title} - {serviceName.current}
@@ -26,6 +25,7 @@ const SEO = ({ title, description, children }) => {
         content={`${title} - ${serviceName.current}`}
       />
       <meta name="twitter:description" content={description} />
+      {children}
     </Helmet>
   );
 };
