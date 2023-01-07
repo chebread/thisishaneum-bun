@@ -14,7 +14,7 @@ const App = () => {
       >
         <link rel="shortcut icon" type="image/x-icon" href={IcoFavicon} />
         <link rel="icon" type="image/svg+xml" href={SvgFavicon} />
-        <link rel="apple-touch-icon" href={SafariFavicon} />
+
         <meta
           name="theme-color"
           media="(prefers-color-scheme: ligth)"
