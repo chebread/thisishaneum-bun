@@ -12,51 +12,51 @@ const Background = () => {
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
         <Blue>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </Blue>
+        </Blue>{' '}
         <White>
           If you'd like to support my progress, please donate about $2 or so via
           Toss.
-        </White>
+        </White>{' '}
       </Phrases>
     </PhrasesWrapper>
   );

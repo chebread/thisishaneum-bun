@@ -11,8 +11,8 @@ const About = () => {
       />
       <IntroWrapper>
         <IntroPhrasesWrapper>
-          <IntroPhrases>I'm</IntroPhrases>
-          <IntroPhrases>Cha Haneum.</IntroPhrases>
+          <IntroPhrases>안녕하세요</IntroPhrases>
+          <IntroPhrases>차한음입니다.</IntroPhrases>
         </IntroPhrasesWrapper>
       </IntroWrapper>
       <RowCenterWrapper>
@@ -36,7 +36,7 @@ const About = () => {
 };
 const IntroWrapper = styled.div`
   width: 100%;
-  height: 50%;
+  padding: 30px 0 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;

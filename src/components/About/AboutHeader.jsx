@@ -83,15 +83,15 @@ const Header = styled(Link)`
   }
 `;
 const SausageHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  color: #fff;
-  height: 50px;
+  overflow-x: scroll; // (0): 이거 안되는 이유 찾기
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 5px;
+  font-size: 20px;
+  color: #fff;
+  height: 50px;
 `;
 const ItemsWrapper = styled.div`
   height: 50px;
@@ -99,10 +99,10 @@ const ItemsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   .active {
-    background-color: rgba(255, 255, 255, 100%);
+    background-color: rgb(7, 238, 0);
     color: #000;
     &:active {
-      background-color: rgba(225, 225, 225, 100%);
+      background-color: rgb(0, 208, 0);
     }
   }
 `;
@@ -120,9 +120,13 @@ const Items = styled(NavLink)`
     &:hover {
       background-color: rgba(50, 47, 42, 80%); // rgba(55, 52, 47, 75%);
     }
+    /* &:active {
+      background-color: rgba(60, 57, 52, 80%);
+    } */
   }
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 `;
 export default AboutHeader;
