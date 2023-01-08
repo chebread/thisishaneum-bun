@@ -24,6 +24,78 @@ const Tech = () => {
         description="If you are curious about the tech stack of Cha Haneum, click this link to check it out in detail"
       />
       {/* grid로 기술 배열하기 feed 형태로 */}
+      <Wrapper>
+        <ItemsWrapper>
+          <Items color="#EFD81B">
+            <SvgJs />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#00CCFF">
+            <SvgReact />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#3678E5">
+            <SvgRecoil />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#4FC08D">
+            <SvgVue />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#fbf0df">
+            <SvgBun />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#ff922b">
+            <SvgAs />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#E34F26">
+            <SvgHtml />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#2762e9">
+            <SvgCss />
+          </Items>
+        </ItemsWrapper>
+        {/* <ItemsWrapper>
+          <Items color="#CA4245">
+            <SvgRr />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#FFCA28">
+            <SvgFirebase />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#e6e6e6">
+            <SvgMapbox />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#8DD6F9">
+            <SvgWebpack />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#F9DC3E">
+            <SvgBabel />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#DB7093">
+            <SvgSc />
+          </Items>
+        </ItemsWrapper> */}
+      </Wrapper>
     </AboutScreen>
   );
 };
