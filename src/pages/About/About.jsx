@@ -18,16 +18,16 @@ const About = () => {
       <RowCenterWrapper>
         <PhrasesWrapper>
           <Phrases>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
-            pariatur veniam sint est vitae iusto ex quia asperiores laborum quo!
-            Voluptas expedita officia ut obcaecati autem nesciunt nobis
-            blanditiis sed.
+            I am Cha Han-eum, a web front-end developer. I like intuitive,
+            simple configuration, dynamic Functionality and interactive response
+            are important to configure the front-end page, predicting Configure
+            your frontend to be as responsive as possible. I'm new to technology
+            oriented, avoiding static forms of development.
           </Phrases>
           <Phrases>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            veniam nostrum culpa beatae recusandae officiis adipisci corporis
-            autem totam laudantium corrupti in sint ratione, eum temporibus odit
-            laboriosam ea eos.
+            Static avoids development means that static content is not produced
+            and utilized. This means that most of the code is written in
+            functional form, and most of Content is configured using APIs.
           </Phrases>
         </PhrasesWrapper>
       </RowCenterWrapper>
@@ -59,8 +59,8 @@ const PhrasesWrapper = styled.div`
   width: 45%;
 `;
 const Phrases = styled.div`
-  font-size: 28px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 44px;
   font-weight: 400;
 `;
 

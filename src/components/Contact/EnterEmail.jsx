@@ -46,9 +46,6 @@ const EnterEmail = () => {
 
   return (
     <FullScreen>
-      <PhrasesWrapper>
-        <Phrases>Enter your email</Phrases>
-      </PhrasesWrapper>
       <InputWrapper>
         <Input
           isError={isWarning}
@@ -125,7 +122,7 @@ const Input = styled.input`
       isError ? '' : 'rgba(50, 50, 50, 100%)'}; // rgba(204, 29, 29, 100%)
   }
   &::placeholder {
-    color: ${({ isError }) => (isError ? '#fff' : 'gray')};
+    color: #fff;
   }
   border-radius: 40px;
   font-size: 40px;

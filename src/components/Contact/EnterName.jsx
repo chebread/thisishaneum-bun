@@ -49,14 +49,11 @@ const EnterName = () => {
 
   return (
     <FullScreen>
-      <PhrasesWrapper>
-        <Phrases>Enter your name</Phrases>
-      </PhrasesWrapper>
       <InputWrapper>
         <Input
           isError={isWarning}
           ref={inputRef}
-          placeholder="Fill in here"
+          placeholder="Enter your name in here"
           onChange={onChange}
           onKeyDown={onKeyDown}
           value={name}
