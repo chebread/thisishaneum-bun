@@ -7,24 +7,40 @@ const AboutHeader = () => {
     <HeaderScreen>
       <HeaderWrapper>
         <Wrapper>
-          <Header to="a">thisishaneum</Header>
+          <Header to="/">thisishaneum</Header>
         </Wrapper>
         <Wrapper>
           <SausageHeader>
             <ItemsWrapper>
-              <Items to="a/t">Tech stack</Items>
+              <Items to="a" end>
+                {/* end keyword is 특정 경로에만 적용하는 active 속성 */}
+                About
+              </Items>
             </ItemsWrapper>
             <ItemsWrapper>
-              <Items to="a/i">Information</Items>
+              <Items to="a/t" end>
+                Tech stack
+              </Items>
             </ItemsWrapper>
             <ItemsWrapper>
-              <Items to="a/c">Contact</Items>
+              <Items to="a/i" end>
+                Information
+              </Items>
             </ItemsWrapper>
             <ItemsWrapper>
-              <Items to="a/j">Careers</Items>
+              <Items to="a/c" end>
+                Contact
+              </Items>
             </ItemsWrapper>
             <ItemsWrapper>
-              <Items to="a/p">Projects</Items>
+              <Items to="a/j" end>
+                Careers
+              </Items>
+            </ItemsWrapper>
+            <ItemsWrapper>
+              <Items to="a/p" end>
+                Projects
+              </Items>
             </ItemsWrapper>
           </SausageHeader>
         </Wrapper>

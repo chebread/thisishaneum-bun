@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SvgBb = props => (
+const SvgBabel = props => (
   <svg
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
@@ -11,5 +11,4 @@ const SvgBb = props => (
   </svg>
 );
 
-export default SvgBb;
-
+export default SvgBabel;

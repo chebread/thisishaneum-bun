@@ -1,13 +1,20 @@
 import AboutScreen from 'components/About/AboutScreen';
 import SvgJs from 'components/About/SvgJs';
 import SvgReact from 'components/About/SvgReact';
-import SvgSc from 'components/About/SvgSc';
 import SvgVue from 'components/About/SvgVue';
 import SvgRecoil from 'components/About/SvgRecoil';
-import SvgWebpack from 'components/About/SvgWebpack';
-import SvgBabel from 'components/About/SvgBabel';
+import SvgAs from 'components/About/SvgAs';
 import SEO from 'components/SEO';
 import styled from 'styled-components';
+import SvgBun from 'components/About/SvgBun';
+import SvgCss from 'components/About/SvgCss';
+import SvgHtml from 'components/About/SvgHtml';
+import SvgSc from 'components/About/SvgSc';
+import SvgFirebase from 'components/About/SvgFirebase';
+import SvgRr from 'components/About/SvgRr';
+import SvgMapbox from 'components/About/SvgMapbox';
+import SvgWebpack from 'components/About/SvgWebpack';
+import SvgBabel from 'components/About/SvgBabel';
 
 const Tech = () => {
   return (
@@ -39,8 +46,38 @@ const Tech = () => {
           </Items>
         </ItemsWrapper>
         <ItemsWrapper>
-          <Items color="#DB7093">
-            <SvgSc />
+          <Items color="#fbf0df">
+            <SvgBun />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#ff922b">
+            <SvgAs />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#E34F26">
+            <SvgHtml />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#2762e9">
+            <SvgCss />
+          </Items>
+        </ItemsWrapper>
+        {/* <ItemsWrapper>
+          <Items color="#CA4245">
+            <SvgRr />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#FFCA28">
+            <SvgFirebase />
+          </Items>
+        </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#e6e6e6">
+            <SvgMapbox />
           </Items>
         </ItemsWrapper>
         <ItemsWrapper>
@@ -53,6 +90,11 @@ const Tech = () => {
             <SvgBabel />
           </Items>
         </ItemsWrapper>
+        <ItemsWrapper>
+          <Items color="#DB7093">
+            <SvgSc />
+          </Items>
+        </ItemsWrapper> */}
       </Wrapper>
     </AboutScreen>
   );
@@ -66,11 +108,9 @@ const ItemsWrapper = styled.div`
 `;
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  // 한줄에 아이템을 3개로만 하고 그 길이는 1:1:1로 한다
-  // minmax(200px, auto) 최소는 200px만, 더 늘어나면 auto로 그냥 늘어나라
-  grid-template-rows: repeat(2, 1fr); // 한 열에 아이템을 2개만 나열한다
   gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  // else
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   margin: 10px;
@@ -85,18 +125,9 @@ const Items = styled.div`
   justify-content: center;
   align-items: center;
   svg {
-    height: 40%;
-    width: 40%;
+    height: 125px;
+    width: 125px;
     fill: #000;
   }
-  &:hover {
-    filter: brightness(85%);
-  }
-  &:active {
-    filter: brightness(70%);
-    height: 95%;
-    width: 95%;
-  }
-  z-index: 1;
 `;
 export default Tech;

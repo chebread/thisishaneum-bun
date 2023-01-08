@@ -8,7 +8,6 @@ import {
 import Introduce from 'pages/Introduce';
 import NotFoundPage from 'pages/ErrorPages/NotFoundPage';
 import ServiceUnavailable from 'pages/ErrorPages/ServiceUnavailable';
-import About from 'pages/About';
 import Sponsors from 'pages/Sponsors';
 import Contact from 'pages/Contact';
 import AboutHeader from 'components/About/AboutHeader';
@@ -19,6 +18,7 @@ import Contacts from 'pages/About/Contacts';
 import Careers from 'pages/About/Careers';
 import Projects from 'pages/About/Projects';
 import Navigator from 'components/Navigator';
+import About from 'pages/About/About';
 
 const Router = () => {
   const router = createBrowserRouter(
@@ -50,7 +50,7 @@ const Router = () => {
         >
           <Route path="a">
             <Route index={true} element={<About />}>
-              {/* path a 에 element로 위치하면 이상함 */}
+              {/* route r 에 element로 위치하면 이상함 */}
             </Route>
             <Route path="t" element={<Tech />} />
             <Route path="i" element={<Info />} />

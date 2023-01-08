@@ -44,4 +44,3 @@ const SvgRc = props => (
 );
 
 export default SvgRc;
-

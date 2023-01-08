@@ -27,11 +27,11 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 1080px) {
+  /* @media (max-width: 1080px) {
     body {
       display: none;
     }
-  }
+  } */
 `;
 
 export default GlobalStyles;
