@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   ::selection {
-    background-color: rgb(7, 238, 0, 99%); // 99%: 사파리 대응을 위해 반투명 설정함
+    background-color: rgb(7, 238, 0, 99.9999999999999%); // 99%: 사파리 대응을 위해 반투명 설정함
     color: #000;
   }
 

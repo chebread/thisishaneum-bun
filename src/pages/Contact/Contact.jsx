@@ -135,7 +135,7 @@ const Wrapper = styled.div`
 const Textarea = styled.textarea`
   all: unset;
   word-break: break-all;
-  height: 100%;
+  height: 100%; // (0): 이게 500px 고정이면 button이 가리게 됨 이거 수정하기
   width: calc(100% - 50px);
   background-color: ${({ isError }) =>
     isError
