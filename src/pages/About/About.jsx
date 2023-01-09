@@ -11,8 +11,8 @@ const About = () => {
       />
       <IntroWrapper>
         <IntroPhrasesWrapper>
-          <IntroPhrases>안녕하세요</IntroPhrases>
-          <IntroPhrases>차한음입니다.</IntroPhrases>
+          <IntroPhrases>I am</IntroPhrases>
+          <IntroPhrases>Cha Haneum.</IntroPhrases>
         </IntroPhrasesWrapper>
       </IntroWrapper>
       <RowCenterWrapper>

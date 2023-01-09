@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 600;
     box-sizing: border-box;
   }
+  
   ::selection {
     background-color: rgb(7, 238, 0, 99%); // 99%: 사파리 대응을 위해 반투명 설정함
     color: #000;

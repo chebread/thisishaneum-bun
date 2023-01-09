@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SvgCheck from 'icons/SvgCheck';
 import FooterButton from 'layouts/FooterButton';
 
-const StartButton = ({ onClick }) => {
+const SendButton = ({ onClick }) => {
   return (
     <FooterScreen>
       <Button onClick={onClick}>
@@ -23,4 +23,4 @@ const Button = styled(FooterButton)`
     background-color: rgba(49, 43, 37, 75%);
   }
 `;
-export default StartButton;
+export default SendButton;
