@@ -6,7 +6,7 @@ const Introduce = () => {
   return (
     <ContentsScreen>
       <SEO
-        noTitle
+        fullTitle="thisishaneum®"
         description="If you want to know about Cha Haneum, click this link"
       />
     </ContentsScreen>
