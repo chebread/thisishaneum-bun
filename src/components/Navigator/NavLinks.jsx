@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import ShowButton from 'components/Navigator/ShowButton';
 import { NavLink } from 'react-router-dom';
-import SvgCoin from 'icons/SvgCoin';
-import SvgHome from 'icons/SvgHome';
-import SvgContact from 'icons/SvgContact';
-import SvgProfile from 'icons/SvgProfile';
+import SvgCoin from 'assets/SvgCoin';
+import SvgHome from 'assets/SvgHome';
+import SvgContact from 'assets/SvgContact';
+import SvgProfile from 'assets/SvgProfile';
 
 const NavLinks = ({ onClick, isClick }) => {
   return (
@@ -64,15 +64,16 @@ const NavButtonWrapper = styled.div`
   margin: 0px 0px 30px 0px;
   z-index: 3;
   .active {
+    box-sizing: border-box;
     svg {
       fill: #9b9b9b;
     }
-    background-color: rgb(20, 17, 12);
+    background-color: rgb(25, 22, 17);
     &:hover {
-      background-color: rgb(25, 21, 17);
+      background-color: rgb(30, 26, 22);
     }
     &:active {
-      background-color: rgb(39, 33, 27);
+      background-color: rgb(44, 38, 32);
     }
   }
 `;
@@ -91,12 +92,12 @@ const NavButton = styled(NavLink)`
   border-radius: 500px; // 30px
   backdrop-filter: blur(15px);
   &:not(.active) {
-    background-color: rgb(30, 27, 22);
+    background-color: rgb(35, 32, 27);
     &:hover {
-      background-color: rgb(35, 31, 27);
+      background-color: rgb(40, 36, 32);
     }
     &:active {
-      background-color: rgb(49, 43, 37);
+      background-color: rgb(54, 48, 42);
     }
   }
   svg {

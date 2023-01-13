@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import SvgHome from 'icons/SvgHome';
+import SvgHome from 'assets/SvgHome';
 import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
 

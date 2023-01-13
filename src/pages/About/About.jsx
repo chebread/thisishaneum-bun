@@ -11,23 +11,21 @@ const About = () => {
       />
       <IntroWrapper>
         <IntroPhrasesWrapper>
-          <IntroPhrases>I am</IntroPhrases>
-          <IntroPhrases>Cha Haneum.</IntroPhrases>
+          <IntroPhrases>안녕하세요</IntroPhrases>
+          <IntroPhrases>차한음입니다.</IntroPhrases>
         </IntroPhrasesWrapper>
       </IntroWrapper>
       <RowCenterWrapper>
         <PhrasesWrapper>
           <Phrases>
-            I am Cha Han-eum, a web front-end developer. I like intuitive,
-            simple configuration, dynamic Functionality and interactive response
-            are important to configure the front-end page, predicting Configure
-            your frontend to be as responsive as possible. I'm new to technology
-            oriented, avoiding static forms of development.
+            Hello, this is front-end developer Cha Han-eum. I construct an
+            intuitive and simple layout. It also provides a UI that users can
+            predict, and develops a UI for users, not a UI that developers can
+            easily develop.
           </Phrases>
           <Phrases>
-            Static avoids development means that static content is not produced
-            and utilized. This means that most of the code is written in
-            functional form, and most of Content is configured using APIs.
+            When I write code, I actively develop using new technologies and
+            develop based on functional programming where possible.
           </Phrases>
         </PhrasesWrapper>
       </RowCenterWrapper>
@@ -42,7 +40,7 @@ const IntroWrapper = styled.div`
   align-items: center;
 `;
 const IntroPhrasesWrapper = styled.div`
-  width: 45%;
+  width: 650px;
 `;
 const IntroPhrases = styled.div`
   font-size: 96px;
@@ -56,7 +54,7 @@ const RowCenterWrapper = styled.div`
   padding-bottom: 100px;
 `;
 const PhrasesWrapper = styled.div`
-  width: 45%;
+  width: 650px;
 `;
 const Phrases = styled.div`
   font-size: 24px;

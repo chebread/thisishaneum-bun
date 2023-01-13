@@ -12,7 +12,7 @@ const Sponsors = () => {
         description="If you want to sponsor for Cha Haneum, click this link to sponsor"
       />
       {/* background에서 글자들의 p hover시 이동하는 것 만들기 */}
-      <Background />
+
       <DonationButton />
     </Screen>
   );

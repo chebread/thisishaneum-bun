@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SvgCoin from 'icons/SvgCoin';
+import SvgCoin from 'assets/SvgCoin';
 import FooterButton from 'layouts/FooterButton';
 import FooterScreen from 'layouts/FooterScreen';
 

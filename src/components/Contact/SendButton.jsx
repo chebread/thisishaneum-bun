@@ -1,6 +1,6 @@
 import FooterScreen from 'layouts/FooterScreen';
 import styled from 'styled-components';
-import SvgCheck from 'icons/SvgCheck';
+import SvgCheck from 'assets/SvgCheck';
 import FooterButton from 'layouts/FooterButton';
 
 const SendButton = ({ onClick }) => {

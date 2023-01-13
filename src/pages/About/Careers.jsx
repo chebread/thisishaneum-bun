@@ -28,7 +28,7 @@ const Careers = () => {
             target="_blank"
           >
             <Category>2021 공개SW개발자대회</Category>
-            <Contents>조직원상 (차한음팀)</Contents>
+            <Contents>조직원상 (차한음)</Contents>
           </Items>
           <Line />
         </ItemsWrapper>

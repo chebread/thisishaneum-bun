@@ -16,9 +16,9 @@ import Tech from 'pages/About/Tech';
 import Info from 'pages/About/Info';
 import Contacts from 'pages/About/Contacts';
 import Careers from 'pages/About/Careers';
-import Projects from 'pages/About/Projects';
 import Navigator from 'components/Navigator';
 import About from 'pages/About/About';
+import Projects from 'pages/About/Projects';
 
 const Router = () => {
   const router = createBrowserRouter(

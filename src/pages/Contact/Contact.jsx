@@ -7,7 +7,6 @@ import SendButton from 'components/Contact/SendButton';
 import sendEmail from 'components/Contact/sendEmail';
 import { useEffect, useRef, useState } from 'react';
 
-// (0): email에 메시지 보낼때 markdown을 html으로 하여 전송하는 기능 만들기 => 불가능할 듯
 // (1): 각각의 요소가 입력이 안되어 있거나 공백 문자로 채워져 있다면 빨간색으로 배경 하기
 // (2): 하단 Notify 컴포넌트 만들기
 // (3): 1번째 input에서 enter시 2번째로 가고 3번째로 가는 것 만들기 (focus ref만 되는가?)
