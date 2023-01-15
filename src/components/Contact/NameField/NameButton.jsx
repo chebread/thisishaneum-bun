@@ -9,18 +9,14 @@ import isErrorState from 'states/Contact/isErrorState';
 const NameButton = ({ value }) => {
   const setIsError = useSetRecoilState(isErrorState);
   const goPage = useSetRecoilState(goPages);
-  const isValue = value != undefined;
 
   const onClick = () => {
-    if (isValue) {
-      if (/\S/.test(value)) {
-        goPage(1);
-      } else {
-        // error
-        setIsError(true);
-      }
-    } else {
+    if (/\S/.test(value)) {
+      console.log(1);
       goPage(1);
+    } else {
+      // error
+      setIsError(true);
     }
   };
   return (

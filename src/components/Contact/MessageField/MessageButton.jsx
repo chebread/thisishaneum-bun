@@ -2,39 +2,40 @@ import styled from 'styled-components';
 import SvgCheck from 'assets/icons/SvgCheck';
 import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import goPages from 'selectors/Contact/goPages';
 import isErrorState from 'states/Contact/isErrorState';
 import { emailState, messageState, nameState } from 'states/Contact/datasState';
 import sendEmail from 'lib/Contact/sendEmail';
 
 const MessageButton = () => {
-  const name = useRecoilValue(nameState);
-  const email = useRecoilValue(emailState);
-  const message = useRecoilValue(messageState);
+  const [name, setName] = useRecoilState(nameState);
+  const [email, setEmail] = useRecoilState(emailState);
+  const [message, setMessage] = useRecoilState(messageState);
   const setIsError = useSetRecoilState(isErrorState);
   const goPage = useSetRecoilState(goPages);
-  const isValue = messageState != undefined;
 
   const onClick = async () => {
-    if (isValue) {
-      if (/\S/.test(message)) {
-        await sendEmail({ name, email, message })
-          .then(() => {
-            // success notify
-            alert('200');
-          })
-          .catch(err => {
-            // error notify
-            alert('500');
-          });
-        goPage(1);
-      } else {
-        // error
-        setIsError(true);
-      }
+    const initValues = () => {
+      setName('');
+      setEmail('');
+      setMessage('');
+    };
+    if (/\S/.test(message)) {
+      await sendEmail({ name, email, message })
+        .then(() => {
+          // success notify
+          alert('200');
+        })
+        .catch(err => {
+          // error notify
+          alert('500');
+        });
+      initValues();
+      goPage(1); // 에러여도 이동하고 값 초기화 한다
     } else {
-      goPage(1);
+      // error
+      setIsError(true);
     }
   };
   return (

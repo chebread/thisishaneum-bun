@@ -10,18 +10,13 @@ import emailMatch from 'lib/Contact/emailMatch';
 const EmailButton = ({ value }) => {
   const setIsError = useSetRecoilState(isErrorState);
   const goPage = useSetRecoilState(goPages);
-  const isValue = value != undefined;
 
   const onClick = () => {
-    if (isValue) {
-      if (/\S/.test(value) && emailMatch(value)) {
-        goPage(1);
-      } else {
-        // error
-        setIsError(true);
-      }
-    } else {
+    if (/\S/.test(value) && emailMatch(value)) {
       goPage(1);
+    } else {
+      // error
+      setIsError(true);
     }
   };
   return (
