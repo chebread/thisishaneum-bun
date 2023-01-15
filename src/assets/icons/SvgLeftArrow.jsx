@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import SvgLeftArrow from 'components/assets/icons/SvgLeftArrow';
+import SvgRightArrow from 'assets/icons/SvgRightArrow';
 
-const SvgRightArrow = () => {
+const SvgLeftArrow = () => {
   return (
     <Right>
-      <SvgLeftArrow />
+      <SvgRightArrow />
     </Right>
   );
 };
@@ -15,4 +15,4 @@ const Right = styled.div`
   }
 `;
 
-export default SvgRightArrow;
+export default SvgLeftArrow;

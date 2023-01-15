@@ -122,7 +122,7 @@ const Items = styled(NavLink)`
   background-color: rgba(30, 27, 22, 80%);
   &:not(.active) {
     &:hover {
-      background-color: rgba(50, 47, 42, 80%); // rgba(55, 52, 47, 75%);
+      background-color: rgba(50, 47, 42, 80%);
     }
     /* &:active {
       background-color: rgba(60, 57, 52, 80%);

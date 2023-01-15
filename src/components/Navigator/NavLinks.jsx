@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import ShowButton from 'components/Navigator/ShowButton';
 import { NavLink } from 'react-router-dom';
-import SvgCoin from 'components/assets/icons/SvgCoin';
-import SvgHome from 'components/assets/icons/SvgHome';
-import SvgContact from 'components/assets/icons/SvgContact';
-import SvgProfile from 'components/assets/icons/SvgProfile';
-import SvgShare from 'components/assets/icons/SvgShare';
+import SvgCoin from 'assets/icons/SvgCoin';
+import SvgHome from 'assets/icons/SvgHome';
+import SvgContact from 'assets/icons/SvgContact';
+import SvgProfile from 'assets/icons/SvgProfile';
+import SvgShare from 'assets/icons/SvgShare';
 
 const NavLinks = ({ onClick, isClick }) => {
   return (

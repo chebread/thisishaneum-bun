@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import SvgCheck from 'components/assets/icons/SvgCheck';
+import SvgCheck from 'assets/icons/SvgCheck';
 import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
 import { useSetRecoilState } from 'recoil';
 import goPages from 'selectors/Contact/goPages';
 
-const StartButton = () => {
+const StartButton = ({ isError }) => {
   const goPage = useSetRecoilState(goPages);
   const onClick = () => {
-    goPage(0);
+    if (!isError) goPage(1);
   };
 
   return (
