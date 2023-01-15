@@ -1,4 +1,4 @@
-import StartButton from 'components/Contact/NextButton';
+import StartButton from 'components/Contact/ContactIntroduce/StartButton';
 import FullScreen from 'layouts/FullScreen';
 import styled from 'styled-components';
 

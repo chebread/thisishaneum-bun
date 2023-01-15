@@ -1,8 +1,8 @@
 import FullScreen from 'layouts/FullScreen';
 import { useRecoilState } from 'recoil';
 import { nameState } from 'states/Contact/datasState';
-import NameInput from './NameInput';
-import NextButton from '../NextButton';
+import NameInput from 'components/Contact/NameField/NameInput';
+import NameButton from 'components/Contact/NameField/NameButton';
 
 const NameField = () => {
   const [name, setName] = useRecoilState(nameState);
@@ -14,7 +14,7 @@ const NameField = () => {
         setValue={setName}
         placeholder="Enter your name"
       />
-      <NextButton value={name} />
+      <NameButton value={name} />
     </FullScreen>
   );
 };

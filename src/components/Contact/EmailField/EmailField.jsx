@@ -1,7 +1,7 @@
 import FullScreen from 'layouts/FullScreen';
 import { useRecoilState } from 'recoil';
 import { emailState } from 'states/Contact/datasState';
-import EmailInput from 'components/Contact/EmailField/EmaiInput';
+import EmailInput from 'components/Contact/EmailField/EmailInput';
 import EmailButton from 'components/Contact/EmailField/EmailButton';
 
 const EmailField = () => {

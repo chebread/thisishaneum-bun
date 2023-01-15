@@ -9,8 +9,7 @@ const goPages = selector({
   set: ({ set, get }, newValue) => {
     if (newValue >= 0) {
       if (get(pageCountState) + 1 >= 4) {
-        set(pageCountState, 0); // message componetn 이면 home으로 이동
-        console.log(1);
+        set(pageCountState, 0); // 값이 커지면 청므으로 이동
       } else {
         set(pageCountState, get(pageCountState) + 1); // 다음 페이지로 이동
       }

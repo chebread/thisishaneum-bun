@@ -7,7 +7,7 @@ import goPages from 'selectors/Contact/goPages';
 import isErrorState from 'states/Contact/isErrorState';
 import emailMatch from 'lib/Contact/emailMatch';
 
-const NextButton = ({ value }) => {
+const EmailButton = ({ value }) => {
   const setIsError = useSetRecoilState(isErrorState);
   const goPage = useSetRecoilState(goPages);
   const isValue = value != undefined;
@@ -43,4 +43,4 @@ const Button = styled(FooterButton)`
     background-color: rgba(49, 43, 37, 75%); // + 20
   }
 `;
-export default NextButton;
+export default EmailButton;

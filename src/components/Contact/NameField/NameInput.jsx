@@ -36,7 +36,7 @@ const NameInput = ({ value, setValue, placeholder }) => {
     <CenterScreen>
       <InputWrapper>
         <Input
-          isError={isError}
+          $isError={isError}
           onChange={onChange}
           placeholder={placeholder}
           onFocus={onFocus}
@@ -64,15 +64,15 @@ const InputWrapper = styled.div`
 `;
 const Input = styled.input`
   all: unset;
-  background-color: ${({ isError }) =>
-    isError ? 'rgba(214, 39, 39, 100%)' : 'rgba(30, 27, 22, 80%)'};
+  background-color: ${({ $isError }) =>
+    $isError ? 'rgba(214, 39, 39, 100%)' : 'rgba(30, 27, 22, 80%)'};
   &:hover {
-    background-color: ${({ isError }) =>
-      isError ? '' : 'rgba(50, 47, 42, 80%)'};
+    background-color: ${({ $isError }) =>
+      $isError ? '' : 'rgba(50, 47, 42, 80%)'};
   }
   &:focus {
-    background-color: ${({ isError }) =>
-      isError ? '' : 'rgba(60, 57, 52, 80%)'};
+    background-color: ${({ $isError }) =>
+      $isError ? '' : 'rgba(60, 57, 52, 80%)'};
     &::placeholder {
       opacity: 0;
     }
@@ -87,6 +87,7 @@ const Input = styled.input`
   border-radius: 45px;
   font-weight: 700;
   font-size: 40px;
+  line-height: 55px;
   z-index: 1;
 `;
 

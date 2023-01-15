@@ -9,12 +9,8 @@ const MessageField = () => {
 
   return (
     <FullScreen>
-      <MessageInput
-        value={message}
-        setValue={setMessage}
-        placeholder="Enter your message"
-      />
-      <MessageButton value={message} type="message" />
+      <MessageInput setValue={setMessage} placeholder="Enter your message" />
+      <MessageButton />
     </FullScreen>
   );
 };

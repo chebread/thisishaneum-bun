@@ -1,13 +1,9 @@
-// 이것은 go page 할때에 notify도 해야 함
-// button도 마찬가지
-
 import styled from 'styled-components';
 import isErrorState from 'states/Contact/isErrorState';
-import goPages from 'selectors/Contact/goPages';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
+import reactTextareaAutosize from 'react-textarea-autosize';
 
-const MessageInput = ({ value, setValue, placeholder }) => {
-  const goPage = useSetRecoilState(goPages);
+const MessageInput = ({ setValue, placeholder }) => {
   const [isError, setIsError] = useRecoilState(isErrorState);
 
   const onChange = e => {
@@ -28,23 +24,19 @@ const MessageInput = ({ value, setValue, placeholder }) => {
   const onKeyDown = e => {
     const { keyCode } = e;
     if (keyCode === 13) {
-      if (/\S/.test(value)) {
-        goPage(1);
-        // notify 띄우기!
-      } else {
-        setIsError(true);
-      }
+      // enter시에 높이 늘어나게 한다!
     }
   };
   return (
     <CenterScreen>
       <InputWrapper>
-        <Input
-          isError={isError}
+        <Textarea
+          $isError={isError}
           onChange={onChange}
           placeholder={placeholder}
           onFocus={onFocus}
           onKeyDown={onKeyDown}
+          maxRows={5}
         />
       </InputWrapper>
     </CenterScreen>
@@ -66,17 +58,17 @@ const InputWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const Input = styled.input`
+const Textarea = styled(reactTextareaAutosize)`
   all: unset;
-  background-color: ${({ isError }) =>
-    isError ? 'rgba(214, 39, 39, 100%)' : 'rgba(30, 27, 22, 80%)'};
+  background-color: ${({ $isError }) =>
+    $isError ? 'rgba(214, 39, 39, 100%)' : 'rgba(30, 27, 22, 80%)'};
   &:hover {
-    background-color: ${({ isError }) =>
-      isError ? '' : 'rgba(50, 47, 42, 80%)'};
+    background-color: ${({ $isError }) =>
+      $isError ? '' : 'rgba(50, 47, 42, 80%)'};
   }
   &:focus {
-    background-color: ${({ isError }) =>
-      isError ? '' : 'rgba(60, 57, 52, 80%)'};
+    background-color: ${({ $isError }) =>
+      $isError ? '' : 'rgba(60, 57, 52, 80%)'};
     &::placeholder {
       opacity: 0;
     }
@@ -84,13 +76,14 @@ const Input = styled.input`
   &::placeholder {
     color: #fff;
   }
-
-  min-height: 50px;
-  min-width: 50%;
+  //
+  height: 50px;
+  width: 50%;
   padding: 30px;
   border-radius: 45px;
   font-weight: 700;
   font-size: 40px;
+  line-height: 55px;
   z-index: 1;
 `;
 
