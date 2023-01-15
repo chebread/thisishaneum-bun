@@ -4,13 +4,26 @@ import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
 import { useSetRecoilState } from 'recoil';
 import goPages from 'selectors/Contact/goPages';
+import isErrorState from 'states/Contact/isErrorState';
 
-const StartButton = ({ isError }) => {
+const MessageButton = ({ value }) => {
+  const setIsError = useSetRecoilState(isErrorState);
   const goPage = useSetRecoilState(goPages);
-  const onClick = () => {
-    if (!isError) goPage(1);
-  };
+  const isValue = value != undefined;
 
+  const onClick = () => {
+    if (isValue) {
+      if (/\S/.test(value)) {
+        goPage(1);
+        // notify 띄우기
+      } else {
+        // error
+        setIsError(true);
+      }
+    } else {
+      goPage(1);
+    }
+  };
   return (
     <FooterScreen>
       <Button onClick={onClick}>
@@ -30,4 +43,4 @@ const Button = styled(FooterButton)`
     background-color: rgba(49, 43, 37, 75%); // + 20
   }
 `;
-export default StartButton;
+export default MessageButton;

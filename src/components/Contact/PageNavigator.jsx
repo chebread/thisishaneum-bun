@@ -8,10 +8,10 @@ const PageNavigator = ({ isError }) => {
   // isError는 값이 입력되지 않았음을 나타냄
   const goPage = useSetRecoilState(goPages);
   const goNext = () => {
-    if (!isError) goPage(-1);
+    if (!isError) goPage(1);
   };
   const goPrevious = () => {
-    goPage(1);
+    goPage(-1);
   };
 
   return (

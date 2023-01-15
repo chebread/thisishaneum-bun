@@ -2,7 +2,7 @@ import { atom } from 'recoil';
 
 const pageCountState = atom({
   key: 'pageCountState',
-  default: 1,
+  default: 3,
 });
 
 export default pageCountState;
