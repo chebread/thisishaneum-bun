@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SvgLeftArrow from 'assets/SvgLeftArrow';
+import SvgLeftArrow from 'components/assets/icons/SvgLeftArrow';
 
 const Svg = props => (
   <svg

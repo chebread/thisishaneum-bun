@@ -19,21 +19,37 @@ import Careers from 'pages/About/Careers';
 import Navigator from 'components/Navigator';
 import About from 'pages/About/About';
 import Projects from 'pages/About/Projects';
+import IntroduceHeader from 'components/Introduce/IntroduceHeader';
 
 const Router = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <>
+      <Route
+        element={
+          <>
+            <Navigator />
+            <Outlet />
+          </>
+        }
+      >
         <Route
           element={
             <>
-              <Navigator />
-              <Header />
+              <IntroduceHeader />
               <Outlet />
             </>
           }
         >
           <Route path="/" element={<Introduce />} />
+        </Route>
+        <Route
+          element={
+            <>
+              <Header />
+              <Outlet />
+            </>
+          }
+        >
           <Route path="c" element={<Contact />} />
           <Route path="s" element={<Sponsors />} />
           <Route path="503" element={<ServiceUnavailable />} />
@@ -42,7 +58,6 @@ const Router = () => {
         <Route
           element={
             <>
-              <Navigator />
               <AboutHeader />
               <Outlet />
             </>
@@ -59,7 +74,7 @@ const Router = () => {
             <Route path="p" element={<Projects />} />
           </Route>
         </Route>
-      </>
+      </Route>
     )
   );
   return <RouterProvider router={router} />;

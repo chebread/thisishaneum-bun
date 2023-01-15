@@ -18,14 +18,24 @@ const About = () => {
       <RowCenterWrapper>
         <PhrasesWrapper>
           <Phrases>
-            Hello, this is front-end developer Cha Han-eum. I construct an
-            intuitive and simple layout. It also provides a UI that users can
-            predict, and develops a UI for users, not a UI that developers can
-            easily develop.
+            Hello, this is front-end developer Cha Han-eum. I usually write code
+            alone at home or at a cafe.
           </Phrases>
           <Phrases>
-            When I write code, I actively develop using new technologies and
-            develop based on functional programming where possible.
+            currently I am developing as a student. When I configure the
+            frontend, I compose it with an intuitive and simple layout, and also
+            provide a UI that users can predict, and develop a UI for users, not
+            a UI that developers can easily develop.
+          </Phrases>
+          <Phrases>
+            Hello, this is front-end developer Cha Han-eum. I usually write code
+            alone at home or at a cafe.
+          </Phrases>
+          <Phrases>
+            currently I am developing as a student. When I configure the
+            frontend, I compose it with an intuitive and simple layout, and also
+            provide a UI that users can predict, and develop a UI for users, not
+            a UI that developers can easily develop.
           </Phrases>
         </PhrasesWrapper>
       </RowCenterWrapper>

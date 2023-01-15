@@ -14,7 +14,9 @@ const Navigator = () => {
   };
 
   return isClick ? (
-    <NavLinks onClick={onUnClick} isClick={isClick} />
+    <>
+      <NavLinks onClick={onUnClick} isClick={isClick} />
+    </>
   ) : (
     <ShowButton onClick={onClick} isClick={isClick} />
   );

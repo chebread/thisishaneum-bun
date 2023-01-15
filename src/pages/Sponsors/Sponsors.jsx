@@ -6,17 +6,14 @@ import ContentsScreen from 'layouts/ContentsScreen';
 
 const Sponsors = () => {
   return (
-    <Screen>
+    <ContentsScreen>
       <SEO
         title="Sponsors"
         description="If you want to sponsor for Cha Haneum, click this link to sponsor"
       />
       <DonationButton />
-    </Screen>
+    </ContentsScreen>
   );
 };
-const Screen = styled(ContentsScreen)`
-  overflow-y: hidden;
-`;
 
 export default Sponsors;

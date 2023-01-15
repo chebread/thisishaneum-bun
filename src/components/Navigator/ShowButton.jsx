@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import SvgXMark from 'assets/SvgXMark';
-import SvgMenu from 'assets/SvgMenu';
+import SvgXMark from 'components/assets/icons/SvgXMark';
+import SvgMenu from 'components/assets/icons/SvgMenu';
 
 const ShowButton = ({ isClick, onClick }) => {
   return (

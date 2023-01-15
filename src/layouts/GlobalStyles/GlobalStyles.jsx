@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar {
     display: none;
   }
-  /* @media (max-width: 1080px) {
+  /* @media (max-width: 1150px) {
     body {
       display: none;
     }

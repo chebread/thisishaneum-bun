@@ -1,10 +1,10 @@
 import HeaderScreen from 'layouts/HeaderScreen';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import serviceNameState from 'states/Contact/serviceNameState';
 import { useRecoilValue } from 'recoil';
+import serviceNameState from 'states/Contact/serviceNameState';
+import styled from 'styled-components';
 
-const Header = () => {
+const IntroduceHeader = () => {
   const serviceName = useRecoilValue(serviceNameState);
 
   return (
@@ -24,8 +24,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: rgba(10, 10, 10, 15%); // 12.5
-  backdrop-filter: blur(5px);
+  mix-blend-mode: difference;
 `;
 const HeaderWrapper = styled(Link)`
   all: unset;
@@ -42,5 +41,4 @@ const HeaderWrapper = styled(Link)`
     font-size: 23px;
   }
 `;
-
-export default Header;
+export default IntroduceHeader;

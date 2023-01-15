@@ -1,13 +1,17 @@
+import serviceNameState from 'states/Contact/serviceNameState';
 import HeaderScreen from 'layouts/HeaderScreen';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { useRecoilValue } from 'recoil';
 
 const AboutHeader = () => {
+  const serviceName = useRecoilValue(serviceNameState);
+
   return (
     <HeaderScreen>
       <HeaderWrapper>
         <Wrapper>
-          <Header to="/">thisishaneum</Header>
+          <Header to="/">{serviceName}</Header>
         </Wrapper>
         <Wrapper>
           <SausageHeader>

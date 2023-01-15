@@ -1,18 +1,20 @@
 import styled from 'styled-components';
-import SvgCoin from 'components/assets/icons/SvgCoin';
-import FooterButton from 'layouts/FooterButton';
+import SvgCheck from 'components/assets/icons/SvgCheck';
 import FooterScreen from 'layouts/FooterScreen';
+import FooterButton from 'layouts/FooterButton';
+import { useSetRecoilState } from 'recoil';
+import goPages from 'selectors/Contact/goPages';
 
-const DonationButton = () => {
+const StartButton = () => {
+  const goPage = useSetRecoilState(goPages);
+  const onClick = () => {
+    goPage(0);
+  };
+
   return (
     <FooterScreen>
-      <Button
-        as="a"
-        rel="noopener noreferrer"
-        href="https://toss.me/chahaneum"
-        target="_blank"
-      >
-        <SvgCoin />
+      <Button onClick={onClick}>
+        <SvgCheck />
       </Button>
     </FooterScreen>
   );
@@ -28,4 +30,4 @@ const Button = styled(FooterButton)`
     background-color: rgba(49, 43, 37, 75%); // + 20
   }
 `;
-export default DonationButton;
+export default StartButton;

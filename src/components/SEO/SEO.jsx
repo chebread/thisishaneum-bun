@@ -1,12 +1,14 @@
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import serviceNameState from 'states/Contact/serviceNameState';
+import { useRecoilValue } from 'recoil';
 
 // (0): 이미지 지정하기
 const SEO = ({ fullTitle, title, description, children }) => {
   const url = useRef(window.location.href);
   const isFullTitle = useRef(fullTitle ? true : false);
-  const serviceName = useRef('thisishaneum®');
-  const serviceTitle = useRef(`${title} - ${serviceName.current}`);
+  const serviceName = useRecoilValue(serviceNameState);
+  const serviceTitle = useRef(`${title} - ${serviceName}`);
 
   return (
     <Helmet>
