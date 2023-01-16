@@ -3,7 +3,7 @@ import SvgCheck from 'assets/icons/SvgCheck';
 import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
 import { useSetRecoilState } from 'recoil';
-import goPages from 'selectors/Contact/goPages';
+import goPages from 'states/Contact/goPages';
 
 const StartButton = () => {
   const goPage = useSetRecoilState(goPages);

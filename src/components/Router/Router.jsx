@@ -52,6 +52,7 @@ const Router = () => {
         >
           <Route path="c" element={<Contact />} />
           <Route path="s" element={<Sponsors />} />
+
           <Route path="503" element={<ServiceUnavailable />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

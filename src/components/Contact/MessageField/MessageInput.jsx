@@ -45,7 +45,7 @@ const MessageInput = ({ setValue, placeholder }) => {
 
 const CenterScreen = styled.div`
   position: absolute;
-  height: 100%;
+  height: calc(100% - 30px);
   width: 100%;
   display: flex;
   justify-content: center;

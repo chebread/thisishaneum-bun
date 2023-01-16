@@ -1,5 +1,6 @@
 import AboutScreen from 'components/About/AboutScreen';
 import SEO from 'components/SEO';
+import FullScreen from 'layouts/FullScreen';
 import styled from 'styled-components';
 
 const Info = () => {
@@ -12,13 +13,13 @@ const Info = () => {
       <Wrapper>
         <ItemsWrapper>
           <Items>
-            <Category>Name</Category>
-            <Contents>Cha Haneum</Contents>
+            <Category>2022 KCF Hackathon</Category>
+            <Contents>동상 (M25)</Contents>
           </Items>
           <Line />
           <Items>
-            <Category>Birth.</Category>
-            <Contents>2008.03.20</Contents>
+            <Category>2021 공개SW개발자대회</Category>
+            <Contents>조직원상</Contents>
           </Items>
           <Line />
         </ItemsWrapper>
@@ -28,8 +29,8 @@ const Info = () => {
 };
 
 const Line = styled.div`
-  min-height: 3px;
-  background-color: rgb(60, 60, 60); ;
+  min-height: 2.5px;
+  background-color: dimgray;
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -40,17 +41,16 @@ const Wrapper = styled.div`
 const ItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin: 15px;
+  width: 100%;
+  margin: 20px 40px 0 40px;
 `;
 const Items = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  font-size: 45px;
+  font-size: 50px;
   &:hover {
     background-color: rgb(30, 30, 30);
-    border-radius: 30px;
   }
   word-wrap: break-word;
 `;

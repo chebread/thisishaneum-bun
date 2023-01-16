@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import isErrorState from 'states/Contact/isErrorState';
-import goPages from 'selectors/Contact/goPages';
+import goPages from 'states/Contact/goPages';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import emailMatch from 'lib/Contact/emailMatch';
 
@@ -50,7 +50,7 @@ const EmailInput = ({ value, setValue, placeholder }) => {
 
 const CenterScreen = styled.div`
   position: absolute;
-  height: 100%;
+  height: calc(100% - 30px);
   width: 100%;
   display: flex;
   justify-content: center;

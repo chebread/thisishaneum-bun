@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
 const serviceNameState = atom({
-  key: 'goPage',
+  key: 'serviceNameState',
   default: 'thisishaneum®',
 });
 

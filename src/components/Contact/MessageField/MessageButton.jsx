@@ -3,7 +3,7 @@ import SvgCheck from 'assets/icons/SvgCheck';
 import FooterScreen from 'layouts/FooterScreen';
 import FooterButton from 'layouts/FooterButton';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import goPages from 'selectors/Contact/goPages';
+import goPages from 'states/Contact/goPages';
 import isErrorState from 'states/Contact/isErrorState';
 import { emailState, messageState, nameState } from 'states/Contact/datasState';
 import sendEmail from 'lib/Contact/sendEmail';

@@ -1,9 +1,10 @@
-import serviceNameState from 'states/Contact/serviceNameState';
+import serviceNameState from 'states/serviceNameState';
 import HeaderScreen from 'layouts/HeaderScreen';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { useRecoilValue } from 'recoil';
 
+// sausage links overflow x 안되는 이유 찾기
 const AboutHeader = () => {
   const serviceName = useRecoilValue(serviceNameState);
 
@@ -17,7 +18,6 @@ const AboutHeader = () => {
           <SausageHeader>
             <ItemsWrapper>
               <Items to="a" end>
-                {/* end keyword is 특정 경로에만 적용하는 active 속성 */}
                 About
               </Items>
             </ItemsWrapper>
@@ -87,8 +87,8 @@ const Header = styled(Link)`
   }
 `;
 const SausageHeader = styled.div`
-  overflow-x: scroll; // (0): 이거 안되는 이유 찾기
   display: flex;
+  overflow: scroll;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -124,9 +124,6 @@ const Items = styled(NavLink)`
     &:hover {
       background-color: rgba(50, 47, 42, 80%);
     }
-    /* &:active {
-      background-color: rgba(60, 57, 52, 80%);
-    } */
   }
   display: flex;
   justify-content: center;

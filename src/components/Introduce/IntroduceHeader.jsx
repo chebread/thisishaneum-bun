@@ -1,7 +1,7 @@
 import HeaderScreen from 'layouts/HeaderScreen';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import serviceNameState from 'states/Contact/serviceNameState';
+import serviceNameState from 'states/serviceNameState';
 import styled from 'styled-components';
 
 const IntroduceHeader = () => {

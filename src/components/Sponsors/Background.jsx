@@ -5,8 +5,8 @@ const Background = () => {
     <PhrasesWrapper>
       <Phrases
         rel="noopener noreferrer"
-        href="https://toss.me/chahaneum"
         target="_blank"
+        href="https://toss.me/chahaneum"
       >
         {/* 이것의 길이를 유동화 해야함 */}
         <Blue>

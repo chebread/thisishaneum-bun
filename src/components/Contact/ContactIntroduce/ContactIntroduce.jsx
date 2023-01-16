@@ -17,7 +17,7 @@ const ContactIntroduce = () => {
 };
 const Wrapper = styled.div`
   position: absolute;
-  height: 100%;
+  height: calc(100% - 30px);
   width: 100%;
   font-size: 50px;
   font-weight: 800;

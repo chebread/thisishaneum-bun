@@ -1,6 +1,4 @@
 import DonationButton from 'components/Sponsors/DonationButton';
-import styled from 'styled-components';
-import Background from 'components/Sponsors/Background';
 import SEO from 'components/SEO';
 import ContentsScreen from 'layouts/ContentsScreen';
 

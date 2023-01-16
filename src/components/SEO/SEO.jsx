@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import serviceNameState from 'states/Contact/serviceNameState';
+import serviceNameState from 'states/serviceNameState';
 import { useRecoilValue } from 'recoil';
 
 // (0): 이미지 지정하기

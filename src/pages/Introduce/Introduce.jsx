@@ -1,6 +1,4 @@
 import SEO from 'components/SEO';
-import Background from 'components/Sponsors/Background';
-import ContentsScreen from 'layouts/ContentsScreen';
 import FullScreen from 'layouts/FullScreen';
 import styled from 'styled-components';
 

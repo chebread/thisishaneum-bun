@@ -1,6 +1,8 @@
 import AboutScreen from 'components/About/AboutScreen';
 import SEO from 'components/SEO';
 import styled from 'styled-components';
+import PDF_22_KCF from 'assets/files/22_KCF.pdf';
+import PDF_21_OSS from 'assets/files/21_OSS.pdf';
 
 const Careers = () => {
   return (
@@ -13,7 +15,7 @@ const Careers = () => {
         <ItemsWrapper>
           <Items
             as="a"
-            href="https://kcf.or.kr/wp-content/uploads/2022/11/%ED%95%B4%EC%BB%A4%ED%86%A4%EC%A4%91%EB%93%B1%EB%B6%80_%EC%88%98%EC%83%81%EC%9E%90.png"
+            href={PDF_22_KCF}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -23,12 +25,12 @@ const Careers = () => {
           <Line />
           <Items
             as="a"
-            href="https://www.oss.kr/dev_competition_activities/show/d47d0b01-f1f9-4b64-a8f6-aa780f86577b"
+            href={PDF_21_OSS}
             rel="noopener noreferrer"
             target="_blank"
           >
             <Category>2021 공개SW개발자대회</Category>
-            <Contents>조직원상 (차한음)</Contents>
+            <Contents>조직원상</Contents>
           </Items>
           <Line />
         </ItemsWrapper>
