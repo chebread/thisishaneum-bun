@@ -1,10 +1,10 @@
+import Screen from 'layouts/Screen';
 import Router from 'components/Router/Router';
-import FullScreen from 'layouts/FullScreen';
 import { Helmet } from 'react-helmet-async';
 
 const App = () => {
   return (
-    <FullScreen>
+    <Screen>
       <Helmet>
         <script
           async
@@ -13,7 +13,7 @@ const App = () => {
         ></script>
       </Helmet>
       <Router />
-    </FullScreen>
+    </Screen>
   );
 };
 
