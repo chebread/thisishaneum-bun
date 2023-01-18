@@ -8,7 +8,7 @@ const ErrorPage = ({ errorCode }) => {
       <CenterScreen>
         <ErrorCode>{errorCode}</ErrorCode>
       </CenterScreen>
-      <GoButton />
+      {/* <GoButton /> */}
     </FullScreen>
   );
 };

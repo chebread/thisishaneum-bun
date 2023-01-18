@@ -20,6 +20,7 @@ import Navigator from 'components/Navigator';
 import About from 'pages/About/About';
 import Projects from 'pages/About/Projects';
 import IntroduceHeader from 'components/Introduce/IntroduceHeader';
+import ErrorPage from 'components/ErrorPages/ErrorPage';
 
 const Router = () => {
   const router = createBrowserRouter(
@@ -78,7 +79,15 @@ const Router = () => {
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+  const routerTemp = createBrowserRouter(
+    createRoutesFromElements(
+      <Route
+        path="*"
+        element={<ErrorPage errorCode="Under reorganization" />}
+      />
+    )
+  );
+  return <RouterProvider router={routerTemp} />;
 };
 
 export default Router;
