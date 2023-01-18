@@ -79,15 +79,8 @@ const Router = () => {
       </Route>
     )
   );
-  const routerTemp = createBrowserRouter(
-    createRoutesFromElements(
-      <Route
-        path="*"
-        element={<ErrorPage errorCode="Under reorganization" />}
-      />
-    )
-  );
-  return <RouterProvider router={routerTemp} />;
+
+  return <RouterProvider router={router} />;
 };
 
 export default Router;
