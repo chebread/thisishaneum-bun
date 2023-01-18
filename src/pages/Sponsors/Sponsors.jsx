@@ -15,3 +15,13 @@ const Sponsors = () => {
 };
 
 export default Sponsors;
+
+{
+  /* <iframe
+src="https://github.com/sponsors/chebread/button"
+title="Sponsor chebread"
+height="35"
+width="116"
+style={{ border: 0 }}
+></iframe> */
+}
