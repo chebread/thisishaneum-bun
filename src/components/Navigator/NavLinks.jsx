@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import ShowButton from 'components/Navigator/ShowButton';
 import { NavLink } from 'react-router-dom';
-import SvgCoin from 'assets/icons/SvgCoin';
 import SvgHome from 'assets/icons/SvgHome';
 import SvgContact from 'assets/icons/SvgContact';
 import SvgProfile from 'assets/icons/SvgProfile';
-import SvgShare from 'assets/icons/SvgShare';
+import SvgCoin from 'assets/icons/SvgCoin';
 
 const NavLinks = ({ onClick, isClick }) => {
   return (
@@ -56,7 +55,7 @@ const NavWrapper = styled.div`
 `;
 const NavButtonWrapper = styled.div`
   position: fixed;
-  min-width: 720px;
+  min-width: 50%;
   height: auto;
   display: flex;
   flex-direction: row;

@@ -1,9 +1,8 @@
 import SvgShare from 'assets/icons/SvgShare';
 import AboutScreen from 'components/About/AboutScreen';
-import GoButton from 'components/ErrorPages/GoButton';
+
 import SEO from 'components/SEO';
-import FooterButton from 'layouts/FooterButton';
-import FooterScreen from 'layouts/FooterScreen';
+
 import styled from 'styled-components';
 
 const About = () => {

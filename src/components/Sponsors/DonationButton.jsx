@@ -9,8 +9,8 @@ const DonationButton = () => {
       <Button
         as="a"
         rel="noopener noreferrer"
-        href="https://toss.me/chahaneum"
         target="_blank"
+        href="https://github.com/sponsors/chebread"
       >
         <SvgCoin />
       </Button>
