@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     box-sizing: border-box;
+    overscroll-behavior: none;
   }
 
   html, body, #root {
