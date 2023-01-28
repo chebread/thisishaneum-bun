@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import NotFoundPage from 'pages/NotFoundPage';
-import Home from 'Pages/Home';
+import Home from 'pages/Home';
 
 const Router = () => {
   const router = createBrowserRouter(

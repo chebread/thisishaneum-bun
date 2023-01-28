@@ -3,6 +3,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import styled from 'styled-components';
 
+// resize시 스크롤이 더 되는 버그 막기
 const HorizontalScreen = ({ children }) => {
   const scrollRef = useRef(null);
   const ghostRef = useRef(null);
@@ -49,7 +50,7 @@ export default HorizontalScreen;
 const GhostWrapper = styled.div`
   width: 100%;
   height: 100%;
-  // safari scroll bounce 관성 막기
+  // (0): safari scroll bounce 관성 막기
 `;
 const PanelsWrapper = styled.div`
   position: fixed;
@@ -62,5 +63,6 @@ const PanelsWrapper = styled.div`
 const Panels = styled(motion.section)`
   display: flex;
   height: 100%;
-  width: max-content; // 이거때문에 width 100%을 사용 불가! => 그래서 그냥 표준 값을 100vw로 잡음 => 이래도 따른 것은 100% 잘 잡힘ㅋㅋㅋㅋ
+  background-color: saddlebrown;
+  width: max-content;
 `;
