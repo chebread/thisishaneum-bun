@@ -5,12 +5,13 @@ import styled from 'styled-components';
 const ContactPanel = () => {
   return (
     <CenterScreen>
-      <Wrapper>
+      hello
+      {/* <Wrapper>
         <Text>Let's work together</Text>
       </Wrapper>
       <Wrapper>
         <Button onClick={() => refreshPage()}>chahanm@proton.me</Button>
-      </Wrapper>
+      </Wrapper> */}
     </CenterScreen>
   );
 };
