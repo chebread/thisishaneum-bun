@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// (0): svg 를 component로 쓸 수 있는 방법 개발하기
 const AwardsBadge = () => {
   return (
     <BadgeWrapper>

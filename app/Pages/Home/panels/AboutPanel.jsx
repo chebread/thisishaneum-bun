@@ -1,9 +1,8 @@
 import FullScreen from 'layouts/Screens/FullScreen';
-import React from 'react';
 import styled from 'styled-components';
 
 const AboutPanel = () => {
-  return <Screen>{React.version}</Screen>;
+  return <Screen>hello</Screen>;
 };
 
 const Screen = styled(FullScreen)``;

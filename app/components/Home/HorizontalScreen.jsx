@@ -36,7 +36,6 @@ const Home = ({ children }) => {
   return (
     <Container ref={containerRef}>
       {Children.toArray(children).map((element, index) => (
-        // 그냥 children 접근시 오류 발생함. Array로서 접근한다.
         <div ref={create} key={index}>
           {element}
         </div>

@@ -1,31 +1,32 @@
 {
   "scripts": {
-    "start": "bun dev --hot --port=8080",
+    "dev": "bun dev --hot --port=8080",
     "build": "react-scripts build"
   },
   "name": "thisishaneum",
   "version": "0.1.61",
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@react-three/fiber": "^8.10.1",
-    "@types/three": "^0.148.1",
-    "framer-motion": "^8.5.4",
+    "@emailjs/browser": "npm:@emailjs/browser",
+    "@react-three/fiber": "npm:@react-three/fiber",
+    "@types/react": "npm:@types/react",
+    "@types/react-dom": "npm:@types/react-dom",
+    "@types/styled-components": "npm:@types/styled-components",
+    "@types/three": "npm:@types/three",
+    "framer-motion": "npm:framer-motion",
     "gsap": "npm:gsap",
     "jotai": "npm:jotai",
-    "qrcode.react": "^3.1.0",
+    "qrcode.react": "npm:qrcode.react",
     "react": "npm:react",
     "react-dom": "npm:react-dom",
     "react-google-recaptcha-v3": "^1.10.1",
     "react-helmet-async": "npm:react-helmet-async",
     "react-router-dom": "npm:react-router-dom",
     "react-scripts": "npm:react-scripts",
-    "react-textarea-autosize": "^8.4.0",
-    "recoil": "^0.7.6",
-    "resize-observer-polyfill": "^1.5.1",
-    "rooks": "^7.4.3",
-    "styled-components": "^5.3.6",
-    "uuid": "^9.0.0",
-    "web-vitals": "^3.0.3"
+    "react-textarea-autosize": "npm:react-textarea-autosize",
+    "resize-observer-polyfill": "npm:resize-observer-polyfill",
+    "styled-components": "npm:styled-components",
+    "three": "npm:three",
+    "web-vitals": "npm:web-vitals"
   },
   "eslintConfig": {
     "extends": [
