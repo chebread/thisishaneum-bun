@@ -1,68 +1,57 @@
-import React, { useRef, useState, useLayoutEffect, useCallback } from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Children, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
+gsap.registerPlugin(ScrollTrigger);
 
-// resize시 스크롤이 더 되는 버그 막기
-const HorizontalScreen = ({ children }) => {
-  const scrollRef = useRef(null);
-  const ghostRef = useRef(null);
-  const [scrollRange, setScrollRange] = useState(0);
-  const [viewportW, setViewportW] = useState(0);
-  const { scrollYProgress } = useScroll();
-  const transform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, -scrollRange + viewportW]
-  );
-  const physics = useRef({ damping: 15, mass: 1, stiffness: 50 }); // 물리 설정
-  const spring = useSpring(transform, physics.current);
+const Home = ({ children }) => {
+  const panelRef = useRef([]);
+  const containerRef = useRef(null);
 
-  const onResize = useCallback(entries => {
-    for (const entry of entries) {
-      setViewportW(entry.contentRect.width);
-    }
+  const createPanelsRefs = () => {
+    let index = -1;
+    const f = panel => {
+      index++;
+      panelRef.current[index] = panel;
+    };
+    return f;
+  };
+  const create = createPanelsRefs();
+  useLayoutEffect(() => {
+    gsap.to(panelRef.current, {
+      ease: 'none',
+      xPercent: -100 * (panelRef.current.length - 1),
+      scrollTrigger: {
+        end: () => '+=' + containerRef.current.offsetWidth * 2, // containerRef.current.offsetWidth,
+        // 스크롤 조절하기
+        trigger: containerRef.current,
+        pin: true, // (0): resize 버벅거림 해결하기
+        scrub: 0.5,
+        snap: 0,
+      },
+    });
+    ScrollTrigger.normalizeScroll(true); // 일단은 허용한다.
   }, []);
 
-  useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
-  }, [scrollRef]);
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(entries => onResize(entries));
-    resizeObserver.observe(ghostRef.current);
-    return () => resizeObserver.disconnect();
-  }, [onResize]);
-
   return (
-    <>
-      <PanelsWrapper>
-        <Panels ref={scrollRef} style={{ x: spring }}>
-          {children}
-        </Panels>
-      </PanelsWrapper>
-      <GhostWrapper ref={ghostRef} style={{ height: scrollRange }} />
-    </>
+    <Container ref={containerRef}>
+      {Children.toArray(children).map((element, index) => (
+        // 그냥 children 접근시 오류 발생함. Array로서 접근한다.
+        <div ref={create} key={index}>
+          {element}
+        </div>
+      ))}
+    </Container>
   );
 };
 
-export default HorizontalScreen;
-
-const GhostWrapper = styled.div`
-  width: 100%;
+const Container = styled.div`
+  position: relative;
+  overscroll-behavior: none;
   height: 100%;
-  // (0): safari scroll bounce 관성 막기
-`;
-const PanelsWrapper = styled.div`
-  position: fixed;
-  will-change: transform;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
-`;
-const Panels = styled(motion.section)`
-  display: flex;
-  height: 100%;
-  background-color: saddlebrown;
   width: max-content;
+  display: flex;
+  flex-direction: row;
 `;
+
+export default Home;

@@ -1,12 +1,17 @@
-import ContactPanel from 'pages/Home/panels/ContactPanel';
+import AwardsBadge from 'components/Home/AwardsBadge';
 import HorizontalScreen from 'components/Home/HorizontalScreen';
+import AboutPanel from 'pages/Home/panels/AboutPanel';
+import ContactPanel from 'pages/Home/panels/ContactPanel';
 
 const Home = () => {
   return (
-    <HorizontalScreen>
-      <ContactPanel />
-      <ContactPanel />
-    </HorizontalScreen>
+    <>
+      <AwardsBadge />
+      <HorizontalScreen>
+        <ContactPanel />
+        <AboutPanel />
+      </HorizontalScreen>
+    </>
   );
 };
 
