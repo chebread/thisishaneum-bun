@@ -1,20 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "app"
+    // fixed
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": "app",
+    "paths": {
+      "~/*": ["./app/*"]
+    },
+    "jsx": "react-jsxdev",
+    "types": ["bun-types"]
   },
-  "include": ["app"]
+  "include": ["app", "**/*.ts", "**/*.tsx", "app/react-app-env.d.ts"]
 }
+
+// (bug): react-jsx시 error 발생
+// (bug): types: 라면 error 발생

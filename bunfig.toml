@@ -1,2 +1,5 @@
 [debug]
 editor = "code"
+
+[dev]
+port = 8080
